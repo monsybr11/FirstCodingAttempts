@@ -45,21 +45,27 @@ def numbercompare():
 
 def firstsimplecalculator():
 
-    number1 = input("input the first number: \n")
-    number2 = input("input the second number: \n")
-    choice = input("what do you want to do with them? [add/subtract/multiply/divide/squareroot/exponentiate]\n")
+    number1 = "a"
+    number2 = "a"
 
-    if number1.isnumeric() is False and number2.isnumeric() is False:
-        print("both inputs are not numbers or contain a space.")
-        exit()
+    while number1.isnumeric() is False or number2.isnumeric() is False:
 
-    if number1.isnumeric() is False:
-        print("the first input is not a number or contains a space.")  # The 3 if statements check if
-        exit()  # the inputs are numeric to not cause errors
+        number1 = input("input the first number: \n")
+        number2 = input("input the second number: \n")
+        choice = input("what do you want to do with them? [add/subtract/multiply/divide/squareroot/exponentiate]\n")
 
-    if number2.isnumeric() is False:
-        print("the second input is not a number or contains a space.")
-        exit()
+        if number1.isnumeric() is False and number2.isnumeric() is False:
+            print("both inputs are not numbers or contain a space.")
+
+        if number1.isnumeric() is False:
+            print("the first input is not a number or contains a space.")  # The 3 if statements check if
+            # the inputs are numeric to not cause errors
+
+        if number2.isnumeric() is False:
+            print("the second input is not a number or contains a space.")
+
+        if number1.isnumeric() is True and number2.isnumeric() is True:
+            continue
 
     number1 = int(number1)
     number2 = int(number2)  # Changing the variables from strings into integers to make the math functions possible.
