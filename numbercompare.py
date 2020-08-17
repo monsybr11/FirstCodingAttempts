@@ -18,5 +18,3 @@ if choice == "small":
 if choice == "both":
     print("this is the biggest number: " + max(a, b, c))
     print("this is the smallest number: " + min(a, b, c))
-else:
-    print("this is not an option!")
