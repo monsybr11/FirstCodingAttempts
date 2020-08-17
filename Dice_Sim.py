@@ -7,7 +7,7 @@ if choice == "no":
     exit()
 
 while choice == "yes":
-    print(random.randint(0, 6))
+    print(random.randint(1, 6))
     choice = input("wanna roll the dice again?\n")
 
 else:
